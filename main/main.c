@@ -17,7 +17,6 @@
 
 void setup_servo_pwm(uint gpio) {
     gpio_set_function(gpio, GPIO_FUNC_PWM);
-    uint slice = pwm_gpio_to_slice_num(gpio);
 
     pwm_config config = pwm_get_default_config();
     pwm_config_set_clkdiv(&config, 64.f);
