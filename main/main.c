@@ -30,7 +30,6 @@ uint16_t adc_to_pwm_us(uint16_t adc_val) {
 }
 
 void update_servo(uint gpio, uint16_t us) {
-    uint slice = pwm_gpio_to_slice_num(gpio);
     uint level = (us * 39062) / 20000;
     pwm_set_gpio_level(gpio, level);
 }
